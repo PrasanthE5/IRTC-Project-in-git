@@ -1,0 +1,169 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Train_Avalable_Details" this:Train_Avalable_Details.In_Browser="https://www.irctc.co.in/nget/train-search" this:Train_Avalable_Details.From="COMBATORE JS-CBE" this:Train_Avalable_Details.To_city="CHENNAI EGMORE - MS" this:Train_Avalable_Details.Date_in="06/04/2022" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_Browser" Type="InArgument(x:String)" />
+    <x:Property Name="From" Type="InArgument(x:String)" />
+    <x:Property Name="To_city" Type="InArgument(x:String)" />
+    <x:Property Name="Date_in" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1208,2203</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Train_Avalable_Details_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="60">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Train_Avalable_Details" sap:VirtualizedContainerService.HintSize="476,2138" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting the Train Search&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: IRCTC Next Generation eTicketing System" sap:VirtualizedContainerService.HintSize="434,1980" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="c8a67a98-a164-405b-b78e-9197de17857a" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1764" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="c8a67a98-a164-405b-b78e-9197de17857a" Text="[From]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.irctc.co.in/nget/train-search" DesignTimeRectangle="123, 394, 359, 41" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' parentid='origin' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="a2b74835-9444-4b1d-89a6-8569a4c1feec" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWsAAAAtCAYAAABoMEq9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJSSURBVHhe7di/S9RxHMdxRxcHoX+gtYbMraEhByenoqXybwhFE5pzCGpICrdqahLa+jE1BOLS1GKkQ6P9ggqC9PQd7y/3DVML9L7n3QceD3jBcR+48cmbGwgA+t5fsZ5ffBljkwtx7vJdMzPr0bLD2ePd/sQ6H4dHb8TQyEwMnp4yM7MeLTucPc4u16pYZ8Hz4er04/j09Uf1AEBvZIezx9nl+sKuYp31zpILNUB/yB5nl+vruop1/keSpzcA/SO7nH1OYg3Qp8QaoABiDVAAsQYogFgDFECsAQog1gAFEGuAAog1QAHEGqAAYg1QgO7G+tdGLD95EBMXl+JN+ysADq87sa4jPT4XJ8/PxaWlD+0HAI6i2VjviXS18Yfx6mf7HYAjaSbWB0W6PVc1QOc6i/V/Il3NVQ3QiA5ivRr3Jw4I9K65qgGa0dllvc/bmK9j7aoGaEzXYu2qBmhOd2LtqgZoVFdi7aoGaFbDsV6NOxOuaoCmNRxrALpBrAEKINYABRBrgAKINUABxBqgAGINUACxBiiAWAMUQKwBCiDWAAU4dKx3dnbMzKxL+5d9sR6bXIihkZn4+OX7gT9kZmbHu+xxdjn7XMU6v5xffBHDo7NxZepRbHz+Ftvb29VarZaZmR3T6vZmh7PH2eXsc3a6inU+Xrh2L4bPzsbQmekYPHXdzMx6tOxw9ji7nH2uYl1f0FtbW/H02etYXl6JlRUzM+vVssPZ4+xyfXEP5IfNzc1YX1+P28/fx4lbazFw852ZmR3T9spIr62tVV3OPrdarfgNAvgslAfSc/IAAAAASUVORK5CYII=" InformativeScreenshot="767b05799c4d25678db6e9751d05a6ff.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IRCTC Next Generation eTicketing System' /&gt;" SearchSteps="Selector" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'INPUT'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="esc" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aa0a2b36-4284-4f60-8223-c6af5113bdfc" InformativeScreenshot="dc5d6fb87a8e9198bf57a05f2e2b2227" Selector="&lt;webctrl tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="c8a67a98-a164-405b-b78e-9197de17857a" Text="[To_city]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.irctc.co.in/nget/train-search" DesignTimeRectangle="123, 465, 359, 41" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl parentid='destination' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='destination' tag='INPUT' type='text' aaname='' /&gt;" Guid="e665bfd8-8645-482a-a4f1-177a8da956e9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWsAAAAtCAYAAABoMEq9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALbSURBVHhe7dtPS1RRHMZxl25cCL2BdlILzV0Lg4R8A9KmctErCEVTCgaDcSEkjBK4CCpq0SYoIfqzkIGCQYyQVhbNLII2Tk2gQahzxyd/1zse/9SiOdPMHPh+4AE59+LyO4eBaRMAoOUdivXU/Gv1D83p7MUZxhhjTZp12Hp80H6s7WFn73V19Iyq/fQwY4yxJs06bD22LlfFsbaC24PLIw/07cfP+AEAoDmsw9Zj63L1hh3H2uptJSfUANAarMfW5ertOo61fUdiV28AQOuwLlufDbEGgBZFrAEgAMQaAAJArAEgAMQaAAJArAEgAMQaAALQsrHmAwMAHGINAAEg1gAQAP9Yl1Z0N51Wd9+4Tvbd1GD6mXKl5JkHYg0Ajl+si4u6OmCRPrKBWS0Uk3dqRKwBwPGIdVm5zF6cL2SWVYx2j6KSspnJ+Kwrs6LNvRdrQqwBwPGI9Ufdjm/V95TdSo7M1rJS8e36sd4nR7Ug1gDgEGsACIBHrPkaBAAaxSPWu74+16Ddoo9tWg+/JO/UiFgDgOMXa/1SduZ4rLtu5bSevFErYg0Ajmesd60+0blDsZ7UndXkmQdiDQCOf6y1oYXUgVin3njfqg2xBgCnDrGWNj882r9dp96Vk1M/xBoAnLrEWlrTwsS4uiYW5fnDxX3EGgCcOsW6/og1ADjEGgACQKwBIADEGgACQKwBIAAtG2sAgEOsASAAxBoAAkCsASAAxBoAAkCsASAA/xzrnZ0dxhhj/2l/cyzW/UNz6ugZVbG08cd/xBhjrLGzHluXrc9xrO1wav6VOnvHdGn4vta+r6tSqcSLoogxxliDVm2vddh6bF22Plun41jbw/NXZtV5Zkwd3SNqP3WNMcZYk2Ydth5bl63PcayrN+hyuaynL94ql1vS0hJjjLFmzTpsPbYuV2/cbfbH9va2CoWCpl9+1ol0Xm03PjHGGGvQjrJI5/P5uMvW5yiK9BvZfeipnIksDwAAAABJRU5ErkJggg==" InformativeScreenshot="9976d49ab7b5dba25c92becf4f753ef6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IRCTC Next Generation eTicketing System' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '02/04/2022'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="c8a67a98-a164-405b-b78e-9197de17857a" Text="[Date_in+&quot;[k(esc)]&quot;]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.irctc.co.in/nget/train-search" DesignTimeRectangle="512, 360, 248, 41" ElementType="InputBox" FriendlyName="'02/04/2022'" FullSelectorArgument="&lt;webctrl parentid='jDate' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='jDate' tag='INPUT' type='text' aaname='' /&gt;" Guid="b30629cc-85af-400c-b860-5959493c45ce" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPwAAAAtCAYAAACKyQbtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQCSURBVHhe7Zq/axRBFMct82/YBfI3pLRLH9DKLp1YJaWBCCekkaCFTQohxCsCdkIQwWrhCBL8Fyw2dlpd97w3P3bfzLy5zOUumNv5fmDI7eybN7dhP+/tJfeIAADVAOEBqIhA+MlkQuPxmM7OzjAwMNZ8sMvstKQTnk80TUPT6dTNAADWGXaZnZbSd8JzNYDsAAwLdprd9nTC8yMAAGB4SLchPAADB8IDUBEQHoCKgPAAVASEB6AiIDwAFQHhAagICA9ARUB4ACpiBcL/pW8nR7S5vU87Jz/oj5vNzwMA/hcrEP4nvd7+SFfdT09ufjGa45e0sSXG8bU742npfC+MGambcdyIzlt3eHUarNnYOqXGnVIx8WJ9xy159y5nERHtJe3KGCVvezES52cjue6yGAAkSwh/Q58P9unxrIM/7sT2x/r85sFX+u1Wl2BvaCFia0XZvfB2ONmlVE64RHpe6+Ncnj5GyRNwTSMjlSK8zJvsreW1ufpr8EWtv0573XIvt78QuiQGgJglhJeCf6Avv77Tfnecm1+k01tZpBiMudH9Tc2yKRIagWJ5WUa3zuSIz5tcepfvnzIU4UVeExcLZ/KKImCKQrwPy+pz69dt1y0SA0DKioQvHYsIbztW0qlVYUI0oVlGn0sV87b9MjLJvDphXrXY5ASWtHpxCyiJAVWzpPBe4Bv69N4/rudey/gCcjdvQRdLhWbpfJHIyWXFDOfFnLqvzJshug692Nj3lM4LCgpdUQyomuEJb9ZFXZfnuq5aLnzQjbV9g7w6RnARczfhCwpCUQyonSWFf0VPD9/Ri8O3tPPsiJ7Pff2Gnty78PpNz+L2IhcKH++v7BvmVVDW3EV4U3hu6dwlMQAMqsPH3dTCMsn4EuGVmGTfOG+Eef/p5/uFhZ9b4BwlMQDMeLjCOwGzf0Rzhx4jktrh0s/ZunRiPydr9//taNhCkObtaO16rfsHHxM6MkXIXKvyO5CUxADgWFL4e3ykz0iQCmNFTSVysBCR3Kp0RtI5XTLuokpexj5azxHQ5IkLRVrcbAGb37VLYgCQPOAO7+URN3Qbd04ne67TzmApEvmSPO6ROlc0mEh4La+XXevsPe49i2Jhxe2vwR7P79olMQDEPGjhOxFZED+EKF4wfbBAvF7vgOnafNEwBMJreX3x0UdQBEwueT4tauH5fhjB24IYABSWEF5+tbZsLPrVWgDAallCeADAugHhAagICA9ARUB4ACoCwgNQERAegIqA8ABUBIQHoCIgPAAVAeEBqAgID0BFqMKPx2OaTqfuCAAwBNhpdtvTCT+ZTKhpGkgPwEBgl9lpdtvTCc/wCa4G/AiAgYGx3oNdlrIzgfAAgGED4QGoBqJ/rHD55P+pjjMAAAAASUVORK5CYII=" InformativeScreenshot="284aa4468555a37c354feb20c6253c1d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IRCTC Next Generation eTicketing System' /&gt;" SearchSteps="Selector, FuzzySelector" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'All Classes'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c8a67a98-a164-405b-b78e-9197de17857a" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.irctc.co.in/nget/train-search" DesignTimeRectangle="512, 465, 248, 39" ElementType="InputBox" FriendlyName="'All Classes'" FullSelectorArgument="&lt;webctrl parentid='journeyClass' tag='DIV' innertext='All Classes' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='journeyClass' tag='DIV' type='' aaname='' /&gt;" Guid="aea66f74-7de2-40fc-b99e-a14235f4e1c0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPwAAAArCAYAAABckOXwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQESURBVHhe7Zq/SxxBFMevFKsU+QfSBfwbxH8gvYXWYptKSCOEM1xxqUwh8dTCCGKhacMGU0YQkcMqXJrDgGsg+OPgYgz6sjM7uzs7M7e7c3dEb+f7gVfsvp3ZWbjPezNihQK8NtHbIwQCUdZgjjMqkB2BcCOY6xX5xtT6OY0vtqjy6hsCgRjhePK6RU+r37nTsuOx8Cwxu3NG3dv7sPcDAEYa5vLcnp+SPhaedXbIDkC5YE4ztzXh2TYAAFA+mNsQHgBHgPAAOASEB8AhIDwADgHhAXAICA+AQ0B4ABwCwgPgEBAeAIcYovBtWp1ZoGeTSsx8pJZ4AgDwsAxR+BNamtykYLiE6V4f+B5NT7yksYkNOhC3ZPzdGo3Ne+TzqybVgmdrRV4az5uEOi49NwCjzQDCX9OX5So9Vzt6TrxYPqYrMUNRQulqXM7pXV29foQ/qDPBa7QtTycKgPwOCA8ejLtT8lYb5P0Q11ncXdDhVp3qW4d0cSfuGRhAeNa9zVJnh23H92l7PpSQS2qQz1r4ow1d9gglB+HBw9Chg7UqVatBvFnJll7Izp8NovG1IxI6j194WcAeotoKzwtHvSmustGFDwuQfAxQjxp8jJRXdyV5ee2ooa01/MZkDvNRB4w4l4f0oZ4jvSL7u0+nImHm0Quf7upCNkUAO+GTHUMRVOH1YiHki+7xoiQJ6DN5pSJVKC8XNfWb9fXbFDAwYmRJbyk7YwDh/9LN5TVdWUdXjC8AlyEtb9gdDR3VUvjMLb+EKrwJWTjT+mTy8mwuc8ePikD4fUULFigBJukV2Vc+58vOGHqHX2pG94NO3tzU8jYd3igH//EbisB/6vAR4doC0aOIO6zo+CL092TlRTeX8kkkXT/97t7FA5QIRfqNNXvZGUMXfmH/V9zNf+6/1/LFhc/68QchSWgnfN4WOL0DUIXnY/kaEtF6zSeLaSowet62e8vFA+KXHln6PmRnDF34/CgofI8/0HGUnK3w2rlZxnpuUZgyztBq0VBJ8vlzmSnwzaAcdI5j6W1lZzxa4XnX7ClJuhNaCx8QdmpFel4I0h3WNLecjzu+kJQ/n+q2ocSptWbkw4KTXn96jL6GcAw6vDP86dDF1W9xYccAwnfpqNHHP940TuhGzNATXz+nq8gSmKQs1O2EXHKo49JzB/jh2uIxgeiqxMm2P3lGJi+vr0uR2VfW0Gu3AoDCAMIDAEYNCA+AQ0B4ABwCwgPgEBAeAIeA8AA4BIQHwCEgPAAOAeEBcAgID4BDQHgAHALCA+AQRuHHF1vUvb0XjwAAygBzmrmtCT+1fk6zO2eQHoCSwFye2/O525rwkfSsGrAtAAKBGO1gLsuys6h47eQCgUCUN7w20T/9zGctPBr0cgAAAABJRU5ErkJggg==" InformativeScreenshot="63c038ec01a4414b753d96dec76e12b9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IRCTC Next Generation eTicketing System' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,118" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="down" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="23556b23-1555-425e-9eec-dcb12149de52">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <uix:NClick ClickType="Single" DisplayName="Click 'AC 3 Tier (3A)'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c8a67a98-a164-405b-b78e-9197de17857a" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.irctc.co.in/nget/train-search" DesignTimeRectangle="526, 485, 94, 18" ElementType="Text" FriendlyName="'AC 3 Tier (3A)'" FullSelectorArgument="&lt;webctrl aaname='AC 3 Tier (3A)' parentid='journeyClass' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='AC 3 Tier (3A)' parentid='journeyClass' tag='SPAN' type='' check:text='AC 3 Tier (3A)' /&gt;" Guid="1eb42155-1d8b-44ee-b483-805bdc274837" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAWCAYAAAA7FknZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIiSURBVGhD7ZXrrcMgDIXvTpnrZpWom6STVB2jUnfgYl4xfoDT5kr84JMitSUY+xyb/rjJEEwjBmEaMQjTiEGYRgzCNGIQZCMem1uWxa33d/pB4uk2/w68l5/tkZZapNjx2XwUhdfuVhSbPTfYGXMwnXuWcD7Or65XPbOlHcT83Z2kqmDE2+2//qAbBFSESodVySThmuaFfavbX/Hr+766RUmsJuX0H4KLwHlHntmEUluoFa9n+tpBzZJG3IjSCVq3NbowCK13+fOWOzmhFkTRjBByqSauXosi7KWzxRoAiIHzZHXFfJigXe0AWOM1MyOwWOEz7diO2Gf4fiJIwTQ3YnQ4r2u8dhZCaaCudglYoyYSI0hhwoF28RqUru2JkrEYIb8T8k3i2HKXOzYSz4Pc+fXS1y4j5VEZwV+IxeExvcSIAklexWLEIRJ7zhhRrpc2uPsBi3YF4VZBRqSNUiF404VXE0ALkrEb0TLVZIS1vuo9o3YZwezDiBBYGqVY4DGKjYIb45iTpSN9nRFyfMynEyHuw0aYtUsIZhcjWoKENZxICESECQV0RIV9VUGQqGYcxmKEhwlSm2MyQsyJ/waa5LintPNIeUQjmp3sSSKLwqOHC8UJSZQ9FhMAoxGeOn7djTYjlLNIvSXuB9phEzPVn/UkwSb3SqB5+P/GNEIEpsI6reeAqaTTAEwjNMKVwjv3KyCmMmnTiEGYRgzCNGIInPsDhu6c6lSbL44AAAAASUVORK5CYII=" InformativeScreenshot="4180b01071ccd9fc2ce6695576938d11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IRCTC Next Generation eTicketing System' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c8a67a98-a164-405b-b78e-9197de17857a" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.irctc.co.in/nget/train-search" DesignTimeRectangle="123, 434, 137, 36" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Search' check:text='Search' /&gt;" Guid="5b2a64ab-126b-48bd-9f5f-8067e6718fb3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI0AAAAoCAYAAADDj3n4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJBSURBVHhe7Zw9TuRAEEb3Ppxkz0Kw8Z6BlTgD0qZkBByBAI5gaWPIICBYxo2rp8td3S4bNystM573SS/xT4+teq7uCexvgZDGuNL0fx7C7vYyvP3+Ed6uzuHUGOou9RcPvJTSvDzFE/7+PAOIiA/ihU2WRoT59d09EU4b8cKKM0pDh4ElYsdJidLI3OUdCGDRNU6URhY93kEAFvFklIapCdagU9RemuFvlncQgEU8QRpoAmmgGaSBZpAGmkEaaAZpoJmNSXMd+ng7mi7s3OP+H7vH/ZX09/7+Y2RD0lyE/jXeS5WvFQdpDpmbu3gj4fUuSZIlsgXTIu5TC1V3Knuu7utCr2M8Xsd9u+45bZA8h/4mj5mlsVJ/fQf8FzbUaUzBuwtnfy1MiiNZGS2wL1QpjCaL4/6mJAl3jGxIGq9A9qlPRR8lyQX3pw6VSMfI0ky7j5FEJUrijtekkkw64vGxKWkE78mPRdZieak6UylfLY2ZWlYIoGNNREOaQ8RMN/KUL0kTu0DdWeY6DdJsR5r7Lt5IsVYotn1QrIkAKsmCNOM2I0V1HUhz0OQC1tGCldOOJkkx24mWpBnGXLkQRpqDZSpOLtaeWhy7vxBAOoV2jbjm8aWZnDekGBNpAJAGPgHSQDNIA80gDTSDNNAM0kAzpTS8LAcrKF6W47VcWEPxWi4fAIA1FB8AkDBFwRI6NUlGafioEcwx+1GjGBGHjgOG2GGMMJJSmhSZu2TRIyfI3yw4MYa6S/11DVPHlYaQ+YTwDnuIlXXWMgGXAAAAAElFTkSuQmCC" InformativeScreenshot="c5cb7769da1b9613a4ad905e2ec9ac4d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IRCTC Next Generation eTicketing System' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1616, 876" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="ac33a0c79be7e19fc6b750300037c77f.png" Selector="&lt;html app='chrome.exe' title='IRCTC Next Generation eTicketing System'/&gt;" Url="[In_Browser]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ending the Train Search&quot;]" />
+  </Sequence>
+</Activity>
